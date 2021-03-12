@@ -1,0 +1,30 @@
+{
+  "name": "goit-js-hw-09",
+  "version": "1.0.0",
+  "description": "Настройка parcel",
+  "main": "index.js",
+  "scripts": {
+    "start": "run index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iromjalis/goit-js-hw-09.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iromjalis/goit-js-hw-09/issues"
+  },
+  "homepage": "https://github.com/iromjalis/goit-js-hw-09#readme",
+  "dependencies": {
+    "joi": "^17.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "parcel-bundler": "^1.12.4"
+  }
+}
