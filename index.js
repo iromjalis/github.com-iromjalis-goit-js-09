@@ -1,1 +1,2 @@
-console.log("Ну наконец-то");
+console.log("Ну хоть что-то");
+console.log("Welcome");
