@@ -1,3 +1,1 @@
-# github.com-iromjalis-goit-js-09
-
-Основные полезные команды -путь (pwd) -лист (ls) -навигация (cd) -очистка clear или control + l -создание файлов (touch) с -оздание папок (mkdir) -переименование/перемещение (mv) -удаление (rm)
+# goit-js-hw-10-food-service
