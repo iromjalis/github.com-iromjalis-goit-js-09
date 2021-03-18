@@ -26,3 +26,7 @@ article {
   -webkit-box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.75);
 }
+
+.is-open {
+  height: auto;
+}

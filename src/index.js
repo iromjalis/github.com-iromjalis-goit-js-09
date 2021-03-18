@@ -1,4 +1,5 @@
 import racoonTemplate from './templates/racoonsTemplate.hbs';
+import pokemonTemplate from './templates/pokemonTemplate.hbs';
 import racoonsDB from './dataBases/racoonsBase.js';
 import pokemon from './dataBases/pokemon.json';
 import pokemon2 from './dataBases/pokemon2.json';
@@ -15,7 +16,7 @@ const markup = racoonTemplate(racoonsDB);
 console.log(pokemon); //pokemon
 const pokemonRender = function (pokemon) {
   let { name, moves, sprites, weight } = pokemon;
-  console.log(name, moves, sprites['back_default'], weight);
+  // console.log(name, moves, sprites['back_default'], weight);
 
   document.body.innerHTML += `<article class="card${name}">
   <h2>${name}</h2>
@@ -36,18 +37,17 @@ const pokemonRender = function (pokemon) {
       `<img src="${sprites.back_default} " /><img src="${sprites.front_default} " />`,
     );
 };
+document.body.insertAdjacentHTML('beforebegin', pokemonTemplate(pokemon));
+document.body.insertAdjacentHTML('beforebegin', pokemonTemplate(pokemon2));
+document.body.insertAdjacentHTML('beforebegin', pokemonTemplate(pokemon3));
 
 pokemonRender(pokemon);
 pokemonRender(pokemon2);
 pokemonRender(pokemon3);
 
-document.body.addEventListener('click', e => {
-  e.target.nodeName === 'ARTICLE' ? (e.target.style.height = 'auto') : '';
-  e.target.nodeName === 'IMG'
-    ? (e.target.parentNode.style.height = 'auto')
-    : '';
-  e.target.nodeName === 'UL' ? (e.target.parentNode.style.height = 'auto') : '';
-  e.target.nodeName === 'LI'
-    ? (e.target.parentNode.parentNode.style.height = 'auto')
-    : '';
+document.querySelectorAll('article').forEach(el => {
+  el.addEventListener('click', e => {
+    // e.currentTarget.style.height = 'auto';
+    e.currentTarget.classList.toggle('is-open');
+  });
 });
